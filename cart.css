@@ -1,0 +1,29 @@
+@import url('style.css');
+
+.empty-state {
+    padding: 80px 20px;
+}
+
+.empty-icon {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    background: rgba(13, 110, 253, 0.05);
+    color: var(--primary-color);
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    font-size: 3rem;
+}
+
+/* Premium summary cards details */
+.checkout-summary-card {
+    background: var(--card-bg-light);
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 16px;
+    padding: 30px;
+}
+
+body.dark-mode .checkout-summary-card {
+    background: var(--card-bg-dark);
+    border-color: var(--border-glass);
+}

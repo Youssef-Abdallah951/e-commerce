@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-Shop | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-uppercase" href="index.html">
+                <span class="fs-4 bg-primary text-white px-3 py-1 rounded-3">S</span>
+                <span class="fs-4 logo-text">Shop</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <div class="links d-flex gap-4 mx-auto my-3 my-lg-0">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="product.html">Product</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                    <button class="theme-toggle-btn text-primary" id="themeToggleBtn" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <a href="cart.html" class="position-relative text-primary fs-4">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-cart">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="intro-shop" class="d-flex align-items-center text-white">
+            <div class="container">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-6">
+                        <span class="badge bg-primary px-3 py-2 mb-3 rounded-pill text-uppercase tracking-wide">New Season Arrival</span>
+                        <h1 class="display-3 fw-bold mb-3">Shop the latest premium collection</h1>
+                        <p class="text-white-50 fs-5 mb-4">Discover premium products handpicked for quality and style. Free shipping on orders over $50.</p>
+                        <a href="product.html" class="btn btn-primary btn-lg rounded-pill px-5 py-3 text-capitalize shadow-sm">Shop Now</a>
+                        <article class="about-shop d-flex gap-5 mt-5 pt-4 border-top border-secondary">
+                            <div>
+                                <h3 class="fw-bold text-white mb-0">50K+</h3>
+                                <p class="text-white-50">Happy Customers</p>
+                            </div>
+                            <div>
+                                <h3 class="fw-bold text-white mb-0">5K+</h3>
+                                <p class="text-white-50">Products</p>
+                            </div>
+                            <div>
+                                <h3 class="fw-bold text-white mb-0">4.9 <i class="fa-solid fa-star text-warning"></i></h3>
+                                <p class="text-white-50">Avg Rating</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <img class="img-fluid" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500&h=500&fit=crop&auto=format" alt="Premium shopping model">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="supported" class="container py-5 my-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Why S-Shop?</h2>
+                <p class="text-muted">We provide an unparalleled premium shopping experience.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fa-solid fa-truck"></i></div>
+                        <h5 class="fw-bold">Free Shipping</h5>
+                        <p class="text-muted mb-0">On all orders over $50</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fa-solid fa-shield"></i></div>
+                        <h5 class="fw-bold">Secure Payment</h5>
+                        <p class="text-muted mb-0">100% Protected Checkouts</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+                        <h5 class="fw-bold">Easy Returns</h5>
+                        <p class="text-muted mb-0">30-day return policy</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                        <h5 class="fw-bold">24/7 Support</h5>
+                        <p class="text-muted mb-0">Live support anytime</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5 mb-5 text-center bg-primary text-white rounded-4 shadow-sm">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <h2 class="fw-bold mb-3">Join the Newsletter</h2>
+                    <p class="mb-4 text-white-50">Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+                    <div class="input-group mb-3 px-md-5">
+                        <input type="email" class="form-control rounded-start-pill py-3 px-4 border-0" placeholder="Enter your email address" id="newsletter-input" required>
+                        <button class="btn btn-dark rounded-end-pill px-4" type="button" id="subscribe-btn">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="decs">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="d-flex align-items-center gap-2 fw-bold text-uppercase mb-4">
+                        <span class="fs-4 bg-primary text-white px-3 py-1 rounded-3">S</span>
+                        <span class="fs-4 text-white">Shop</span>
+                    </div>
+                    <p style="color: #94a3b8;">Your one-stop destination for premium products across electronics, fashion, shoes, and accessories.</p>
+                </div>
+                <div class="col-md-3 col-lg-3">
+                    <h5 class="fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-lg-4">
+                    <h5 class="fw-bold mb-4">Contact Us</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 text-white-50">
+                        <li><i class="fa-solid fa-location-dot me-3 text-primary"></i>123 Commerce Street, New York, NY 10001</li>
+                        <li><i class="fa-solid fa-phone me-3 text-primary"></i>+1 234 567 890</li>
+                        <li><i class="fa-solid fa-envelope me-3 text-primary"></i>support@s-shop.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-5 border-secondary">
+            <div class="text-center text-white-50 mt-4">
+                <p class="mb-0">&copy; 2026 S-Shop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-Shop | Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-uppercase" href="index.html">
+                <span class="fs-4 bg-primary text-white px-3 py-1 rounded-3">S</span>
+                <span class="fs-4 logo-text">Shop</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <div class="links d-flex gap-4 mx-auto my-3 my-lg-0">
+                    <a href="index.html">Home</a>
+                    <a href="product.html" class="active">Product</a>
+                    <a href="cart.html">Cart</a>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                    <button class="theme-toggle-btn text-primary" id="themeToggleBtn" aria-label="Toggle Theme">
+                        <i class="fa-solid fa-moon"></i>
+                    </button>
+                    <a href="cart.html" class="position-relative text-primary fs-4">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-cart">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="mb-5">
+            <h1 class="text-capitalize fw-bold mb-1">Premium Store</h1>
+            <p class="text-muted" id="products-count">Showing 6 Products</p>
+        </div>
+
+        <div class="controls-bar mb-5 shadow-sm">
+            <div class="row g-3 justify-content-between align-items-center">
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <span class="input-group-text bg-transparent border-end-0 text-muted"><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <input type="text" id="live-search" class="form-control border-start-0 ps-0" placeholder="Search premium products...">
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="d-flex gap-2 overflow-x-auto py-1 scroll-none" id="categories-container">
+                        <button class="btn btn-sm btn-primary rounded-pill px-3 active" data-category="all">All</button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3" data-category="Electronics">Electronics</button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3" data-category="Fashion">Fashion</button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3" data-category="Shoes">Shoes</button>
+                        <button class="btn btn-sm btn-outline-secondary rounded-pill px-3" data-category="Accessories">Accessories</button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <select id="sorting-select" class="form-select rounded-pill">
+                        <option value="default">Sort: Recommended</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <section class="row g-4" id="products-grid"></section>
+    </main>
+
+    <div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-4 border-0 overflow-hidden shadow-lg">
+                <div class="modal-body p-0">
+                    <div class="row g-0">
+                        <div class="col-md-6 bg-dark-subtle">
+                            <img src="" id="qv-img" class="img-fluid w-100 h-100 object-fit-cover" alt="Product Image">
+                        </div>
+                        <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                            <button type="button" class="btn-close ms-auto mb-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h3 class="fw-bold mb-2" id="qv-name">Product Name</h3>
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="star-rating text-warning"><i class="fa-solid fa-star"></i> 4.8</span>
+                                <span class="text-muted fs-7">(45 Reviews)</span>
+                            </div>
+                            <h4 class="text-primary fw-bold mb-4" id="qv-price">$0.00</h4>
+                            <p class="text-muted mb-4 fs-6">Experience premium build, amazing durability, and incredible modern design built for the highest standard.</p>
+                            <button class="btn btn-primary btn-lg rounded-pill px-4" id="qv-add-btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
